@@ -8,6 +8,7 @@ TIMER FUNCTIONALITY
         - app shows "stop" button once timer has started
         - clicking pause button resets timer
 - displaying "start" once session is completed
+- reset App when stop is clicked
 
 IMPLEMENT TIMER SETTINGS
 
@@ -18,32 +19,21 @@ IMPLEMENT TIMER SETTINGS
 - set cycles
 - set tabatas
 
+modify parameter with minus and plus
+
 =====================
-- isPrep = timePassed <= prep
-- isWorkout = timePassed % (work + rest) <= 20 
-- isRest = timePassed % (work + rest) > 20
-- tabataCompleted = timePassed === (work + rest) * cycles
 
-useEffect(() => {
-        let timePassed = initTime - timeRemaining
-        setIsWorkout()
-},[timeRemaining])
 
-- [tabatasRemaining, setTabatasRemaining] = useState(tabatas)
 
-function minutes takes params time, initTime, prepTime, workout time, rest time, cycles, tabatas
+[state, setState] = useState({
+                        prepare: 10,
+                        work: 20,
+                        rest: 10
+})
 
-20 sec workout
-10 sec rest
-8
-
-const minutes = () => {
-        let timePassed = initTime - timeRemaining 
-        let accumBlockTime = 
-        const displayedTime = timePassed
-                //show preptime
-        if(timePassed <= prepTime>)
-
-        return displayedTime
-}
+- tabataSettings als prop für Display-Komponente
+- tabataState 
+- Business-Logik => aus tabata-Settings die Gesamtlaufzeit ermitteln (unit testen)
+- state aus Tabata-Settings
+alternativ: abgelaufene Zeit aus Setting und Gesamtlaufzeit.
 

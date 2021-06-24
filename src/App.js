@@ -112,12 +112,13 @@ function App() {
      let timer = ""
 
      useEffect(() => {
-      if(timeIsRunning) {
+      
            timer = setTimeout(() => {
+            if(timeIsRunning) {
                   setTimeRemaining(prevTime => prevTime - 1)
-                  console.log("cycles: " + cycles)
+                  console.log("cycles: " + cycles) }
               }, 1000);
-      } 
+       
   },[timeRemaining, timeIsRunning])
 
   return (
