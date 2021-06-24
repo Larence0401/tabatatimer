@@ -1,0 +1,92 @@
+body {box-sizing: border-box;}
+
+#container    {display: grid;
+              width: 70%;
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: 60% 40%;
+              height: 100vh;
+              margin: 0 auto;
+              text-align: center;
+               }
+
+#tabata       {grid-column: 1 / 3;
+               }
+
+#cycles       {grid-column: 1 / 2;
+               grid-row: 2 / 3;
+                background:rgb(230,230,230);}
+
+#tabatas       {grid-column: 2 / 3;
+                  grid-row: 2 / 3;
+                   background: rgb(230,230,230);}
+
+#settings     {grid-column: 3 / 4;
+              position: relative;
+              grid-row: 1 / -1;
+              background: rgb(230,230,230);
+              padding: 1rem;}
+
+#tabata,
+#cycles,
+#tabatas      {border: 1rem solid black;}
+
+#tabata-length  {font-size: 10rem;
+                 font-weight: 600;
+                }
+
+.big-number    {font-size: 8rem;}
+
+.label          {font-size: 2rem;}
+
+.param        {margin: .6em 0;
+                font-size: 1.65rem;
+                display: flex;
+                justify-content: space-between;
+               padding: .3em;
+               border: 1px solid rgba(0,0,0,.2);}
+
+.btns          {display: flex;
+                border: none;}
+
+.modify        {border: 1px solid rgba(0,0,0,.2);
+                width: 50%;}
+
+#minus          {border-top-left-radius: 10px;;
+                 border-bottom-left-radius: 10px;}
+
+#plus            {border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;}
+
+#start         {text-align: center;
+                justify-content: center;}
+
+.blinking       {animation:blinkingText 1.2s infinite;}
+
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+.hide    {visibility: hidden;
+            }
+
+.noShow    {display: none}
+
+.show       {display: block;}
+
+#stop        {position: absolute;
+              top: 80%;
+              width: 80%;}
+
+.prepare    {background: yellow;}
+
+.work       {background: green;}
+
+.rest       {background: red;}
+
+.tabata      {background: gray;}
+
+.param       {cursor: pointer;}
